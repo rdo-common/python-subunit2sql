@@ -14,7 +14,7 @@ used for the DB does not preclude using any test result format.
 
 Name:           python-%{pypi_name}
 Version:        1.8.0
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Tooling for converting subunit streams into a SQL DB
 
 License:        ASL 2.0
@@ -34,10 +34,10 @@ BuildRequires:  python-setuptools
 BuildRequires:  python2-pbr
 
 # Test Requirements
-BuildRequires:  python2-fixtures
+BuildRequires:  python-fixtures
 BuildRequires:  python2-mock
-BuildRequires:  python2-testscenarios
-BuildRequires:  python2-testrepository
+BuildRequires:  python-testscenarios
+BuildRequires:  python-testrepository
 BuildRequires:  python2-testtools
 BuildRequires:  python2-PyMySQL
 BuildRequires:  python2-psycopg2
@@ -238,6 +238,9 @@ rm -rf .testrepository
 %endif
 
 %changelog
+* Wed Aug 09 2017 Chandan Kumar <chkumar246@gmail.com> - 1.8.0-5
+- Fixed test dependencies
+
 * Wed Aug 09 2017 Chandan Kumar <chkumar246@gmail.com> - 1.8.0-4
 - Fixed python2 and python3 dependencies
 
