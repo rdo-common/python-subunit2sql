@@ -14,7 +14,7 @@ used for the DB does not preclude using any test result format.
 
 Name:           python-%{pypi_name}
 Version:        1.8.0
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Tooling for converting subunit streams into a SQL DB
 
 License:        ASL 2.0
@@ -99,7 +99,7 @@ Requires:   python3-oslo-config
 Requires:   python3-oslo-db
 Requires:   python3-subunit
 Requires:   python3-six
-Requires:   python3-SQLAlchemy
+Requires:   python3-sqlalchemy
 Requires:   python3-stevedore
 Requires:   python3-dateutil
 
@@ -238,6 +238,9 @@ rm -rf .testrepository
 %endif
 
 %changelog
+* Thu Aug 10 2017 Chandan Kumar <chkumar246@gmail.com> - 1.8.0-6
+- Fixed python3-sqlalchemy package name
+
 * Wed Aug 09 2017 Chandan Kumar <chkumar246@gmail.com> - 1.8.0-5
 - Fixed test dependencies
 
