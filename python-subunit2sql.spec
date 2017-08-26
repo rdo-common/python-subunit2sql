@@ -14,7 +14,7 @@ used for the DB does not preclude using any test result format.
 
 Name:           python-%{pypi_name}
 Version:        1.8.0
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Tooling for converting subunit streams into a SQL DB
 
 License:        ASL 2.0
@@ -31,30 +31,30 @@ Summary:        %{summary}
 
 BuildRequires:  python2-devel
 BuildRequires:  python-setuptools
-BuildRequires:  python-pbr
+BuildRequires:  python2-pbr
 
 # Test Requirements
 BuildRequires:  python-fixtures
-BuildRequires:  python-mock
+BuildRequires:  python2-mock
 BuildRequires:  python-testscenarios
 BuildRequires:  python-testrepository
-BuildRequires:  python-testtools
-BuildRequires:  python-PyMySQL
-BuildRequires:  python-psycopg2
-BuildRequires:  python-os-testr
-BuildRequires:  python-oslo-concurrency
-BuildRequires:  python-testresources
-BuildRequires:  python-dateutil
+BuildRequires:  python2-testtools
+BuildRequires:  python2-PyMySQL
+BuildRequires:  python2-psycopg2
+BuildRequires:  python2-os-testr
+BuildRequires:  python2-oslo-concurrency
+BuildRequires:  python2-testresources
+BuildRequires:  python2-dateutil
 
-Requires:   python-pbr
-Requires:   python-alembic
-Requires:   python-oslo-config
-Requires:   python-oslo-db
-Requires:   python-subunit
-Requires:   python-six
-Requires:   python-SQLAlchemy
-Requires:   python-stevedore
-Requires:   python-dateutil
+Requires:   python2-pbr
+Requires:   python2-alembic
+Requires:   python2-oslo-config
+Requires:   python2-oslo-db
+Requires:   python2-subunit
+Requires:   python2-six
+Requires:   python2-SQLAlchemy
+Requires:   python2-stevedore
+Requires:   python2-dateutil
 
 %description -n python2-%{pypi_name}
 %{common_desc}
@@ -63,8 +63,8 @@ Requires:   python-dateutil
 Summary:    %{name} graph subpackage
 
 Requires:   python2-%{pypi_name} = %{version}-%{release}
-Requires:   python-pandas
-Requires:   python-matplotlib
+Requires:   python2-pandas
+Requires:   python2-matplotlib
 
 %description -n    python2-%{pypi_name}-graph
 %{common_desc}
@@ -238,8 +238,11 @@ rm -rf .testrepository
 %endif
 
 %changelog
-* Thu Aug 10 2017 Chandan Kumar <chkumar246@gmail.com> - 1.8.0-4
-- Fixed package name for sqlalchemy
+* Wed Aug 09 2017 Chandan Kumar <chkumar246@gmail.com> - 1.8.0-5
+- Fixed test dependencies
+
+* Wed Aug 09 2017 Chandan Kumar <chkumar246@gmail.com> - 1.8.0-4
+- Fixed python2 and python3 dependencies
 
 * Wed Aug 02 2017 Chandan Kumar <chkumar246@gmail.com> - 1.8.0-3
 - Enable python3 subpackage
