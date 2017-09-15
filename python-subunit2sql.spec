@@ -40,11 +40,11 @@ BuildRequires:  python-testscenarios
 BuildRequires:  python-testrepository
 BuildRequires:  python2-testtools
 BuildRequires:  python2-PyMySQL
-BuildRequires:  python2-psycopg2
+BuildRequires:  python-psycopg2
 BuildRequires:  python2-os-testr
 BuildRequires:  python2-oslo-concurrency
-BuildRequires:  python2-testresources
-BuildRequires:  python2-dateutil
+BuildRequires:  python-testresources
+BuildRequires:  python-dateutil
 
 Requires:   python2-pbr
 Requires:   python2-alembic
@@ -54,7 +54,7 @@ Requires:   python2-subunit
 Requires:   python2-six
 Requires:   python2-sqlalchemy
 Requires:   python2-stevedore
-Requires:   python2-dateutil
+Requires:   python-dateutil
 
 %description -n python2-%{pypi_name}
 %{common_desc}
