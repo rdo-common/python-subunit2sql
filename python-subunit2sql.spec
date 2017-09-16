@@ -14,7 +14,7 @@ used for the DB does not preclude using any test result format.
 
 Name:           python-%{pypi_name}
 Version:        1.8.0
-Release:        6%{?dist}
+Release:        6.1%{?dist}
 Summary:        Tooling for converting subunit streams into a SQL DB
 
 License:        ASL 2.0
@@ -47,10 +47,10 @@ BuildRequires:  python-testresources
 BuildRequires:  python-dateutil
 
 Requires:   python2-pbr
-Requires:   python2-alembic
+Requires:   python-alembic
 Requires:   python2-oslo-config
 Requires:   python2-oslo-db
-Requires:   python2-subunit
+Requires:   python-subunit
 Requires:   python2-six
 Requires:   python2-sqlalchemy
 Requires:   python2-stevedore
